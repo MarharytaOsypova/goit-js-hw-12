@@ -1,7 +1,7 @@
 
 export function renderImages(images) {
     const gallery = document.querySelector('.gallery');
-    gallery.innerHTML = '';  
+    
 
     const markup = images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
         <div class="photo-card">
@@ -17,5 +17,5 @@ export function renderImages(images) {
         </div>
     `).join('');
 
-    gallery.insertAdjacentHTML('beforeend', markup);  
+    gallery.insertAdjacentHTML('beforeend', markup);   
 }
